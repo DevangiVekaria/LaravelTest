@@ -35,7 +35,7 @@
                 'class' => 'form-control',
                 'required'
                 )) !!}
-                @if ($errors->has('name'))
+                @if ($errors->has('product_name'))
                                 <span class="help-block">{{ $errors->first('product_name') }}</span>
                                 @endif
             </div>

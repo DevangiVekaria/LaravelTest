@@ -18,5 +18,6 @@ Route::get('/', function () {
 
 Route::resource('products','ProductController',array('except' => array('search')));
 Route::get('products/search/category/{categoryId?}/product/{productName?}','ProductController@search');
+Route::get('pdfview',array('as'=>'pdfview','uses'=>'ProductController@pdfview'));
 
 

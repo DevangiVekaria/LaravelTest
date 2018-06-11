@@ -39,7 +39,8 @@
     </div>
     
 </div>
-<div class="col-md-1"></div>
+<div class="col-md-1"><a href="{{ route('pdfview',['download'=>'pdf']) }}">Download PDF</a>
+</div>
         <div class="col-xs-4 col-sm-4 col-md-4">
             <div class="form-group">
                 <strong>Filter by Product Name:</strong>

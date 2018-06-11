@@ -36,7 +36,7 @@
                 'required'
                 )); ?>
 
-                <?php if($errors->has('name')): ?>
+                <?php if($errors->has('product_name')): ?>
                                 <span class="help-block"><?php echo e($errors->first('product_name')); ?></span>
                                 <?php endif; ?>
             </div>

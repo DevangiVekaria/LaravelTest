@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
-
 use App\Product;
 use App\Category;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use PDF;
 
 
 class ProductController extends Controller
@@ -29,6 +28,25 @@ class ProductController extends Controller
 
         return view('products.index')->with($params);
 		
+    }
+    public function pdfview(Request $request)
+    {
+        
+        $product = Product::all();
+        
+        view()->share('product',$product);
+        
+
+        if($request->has('download')){
+
+            
+            $pdf = PDF::loadView('pdfview');
+            dd('testt');die;
+            dd($pdf);
+        die;
+            return $pdf->download('pdfview.pdf');
+        }
+        return view('products.pdfview');
     }
 
     public function search($categoryId = null,$productName=null)

@@ -11,10 +11,12 @@ header('Access-Control-Allow-Origin: *');
 |
 */
 
+
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
+//$app->register(\Barryvdh\DomPDF\ServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

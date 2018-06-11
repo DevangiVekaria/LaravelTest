@@ -38,7 +38,8 @@
     </div>
     
 </div>
-<div class="col-md-1"></div>
+<div class="col-md-1"><a href="<?php echo e(route('pdfview',['download'=>'pdf'])); ?>">Download PDF</a>
+</div>
         <div class="col-xs-4 col-sm-4 col-md-4">
             <div class="form-group">
                 <strong>Filter by Product Name:</strong>
@@ -69,7 +70,7 @@
          {categoryId = $("#category_id").val();}
          if($("#productName").val() != "" && $("#productName").val() != null)
          {productName = $("#productName").val();}
-    //$.get("<?php echo e(URL::to('/')); ?>/products/search/category/0/product/0", function( data ) {
+    
     $.get("<?php echo e(URL::to('/')); ?>/products/search/category/"+categoryId+"/product/"+productName, function( data ) {
     $( "#results" ).html( data );
 });
