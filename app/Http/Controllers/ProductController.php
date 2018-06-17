@@ -39,9 +39,9 @@ class ProductController extends Controller
 
         if($request->has('download')){
 
-            
+          
             $pdf = PDF::loadView('pdfview');
-            dd('testt');die;
+            dd('testt');die;  
             dd($pdf);
         die;
             return $pdf->download('pdfview.pdf');

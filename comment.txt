@@ -1,0 +1,5 @@
+Add dummy data for category
+
+php artisan db:seed --class=CategoriesTableSeeder
+
+php artisan make:controller ProductController --resource
