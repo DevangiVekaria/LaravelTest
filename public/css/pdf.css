@@ -1,0 +1,58 @@
+body {
+    font-family: 'Myriad Pro'
+}
+
+img {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.col-8 {
+    width: 80%;
+
+}
+
+.col-8 p {
+    padding: 15px;
+}
+
+.col-4 {
+    width: 20%;
+}
+
+.col-4 p {
+    padding-top: 150px;
+    padding-left: 15px;
+}
+
+.list {
+    display: flex;
+}
+
+.list li {
+    list-style: none;
+    width: 30%;
+    font-size: 11px;
+    color: #E6E6E6;
+    text-align: center;
+}
+
+.bar::after {
+    height: 100%;
+    content: '';
+    background: #000;
+    width: 30%;
+    display: block;
+    left: 70%;
+    right: 0;
+    position: absolute;
+    z-index: 5;
+}
+
+.bar {
+    overflow: hidden;
+    position: relative;
+}
